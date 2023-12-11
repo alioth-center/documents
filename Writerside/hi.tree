@@ -3,11 +3,13 @@
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
 
 <instance-profile id="hi" name="Documents of Alioth Center"
-                 start-page="index.md">
+                 start-page="home.md">
 
-    <toc-element topic="index.md"/>
-    <toc-element topic="alioth-center.md"/>
-    <toc-element topic="akasha-system.md"/>
-    <toc-element topic="ceobebot.md"/>
-    <toc-element topic="gis-system.md"/>
+    <toc-element topic="home.md" toc-title="首页"/>
+    <toc-element topic="infrastructure.md" toc-title="基础框架"/>
+    <toc-element topic="alioth-center.md" toc-title="玉衡系统"/>
+    <toc-element topic="akasha-system.md" toc-title="虚空系统"/>
+    <toc-element topic="ceobebot.md" toc-title="刻俄柏智能"/>
+    <toc-element topic="gis-system.md" toc-title="GISS项目"/>
+    <toc-element hidden="true" topic="license.md" toc-title="开源协议"/>
 </instance-profile>

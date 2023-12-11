@@ -3,12 +3,14 @@
     <variables>
         <header-logo>alioth.png</header-logo>
         <primary-color>purple</primary-color>
+        <custom-favicons>alioth-favicon_500x500.png</custom-favicons>
     </variables>
     <build-profile instance="instance_id"/>
     <footer>
         <social type="email" href="mailto:public@alioth.center">public@alioth.center</social>
         <social type="bilibili" href="">AliothCenter</social>
-        <copyright>github.com/alioth-center</copyright>
+        <copyright>Alioth Center, 2020-2023</copyright>
+        <link href="https://github.com/alioth-center/infrastructure">Infrastructure</link>
         <link href="https://github.com/alioth-center/alioth-center-core">AliothCenter</link>
         <link href="https://github.com/alioth-center/akasha-system-core">AkashaSystem</link>
         <link href="https://github.com/alioth-center/ceobebot-core">Ceobebot</link>
