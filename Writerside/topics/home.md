@@ -1,54 +1,38 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
-<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
-       id="home" title="Welcome">
+# Welcome
 
-    <title>
-        Welcome
-    </title>
-    <p>欢迎来到『玉衡天枢』，这是一个致力于探索实用应用的开源组织。</p>
-    <chapter title="探索项目">
-        <chapter title="1. 基础设施" id="1">
-        </chapter>
-        <chapter title="2. 玉衡系统" id="2">
-        </chapter>
-        <chapter title="3. 虚空系统" id="3">
-        </chapter>
-        <chapter title="4. 刻俄柏智能" id="4">
-        </chapter>
-        <chapter title="5. GISS项目" id="5-giss">
-        </chapter>
-    </chapter>
-    <chapter title="用户社区">
-        <table>
-            <tr>
-                <td>类型</td>
-                <td>描述</td>
-                <td>链接</td>
-            </tr>
-            <tr>
-                <td>QQ群</td>
-                <td>任意感兴趣的用户、开发者可在此发表观点与建议</td>
-                <td><a href="https://ac.cn">加入『玉衡天枢』QQ群聊</a></td>
-            </tr>
-            <tr>
-                <td>QQ频道</td>
-                <td>任意感兴趣的用户、开发者可在此发表观点与建议</td>
-                <td><a href="https://ac.cn">加入『玉衡天枢』QQ频道</a></td>
-            </tr>
-            <tr>
-                <td>飞书</td>
-                <td>实际参与『玉衡天枢』开发、测试、使用的用户可在此协作</td>
-                <td><a href="https://alioth-center.feishu.cn/invite/member/AxhflO7WP6wjUScG">加入『玉衡天枢』飞书组织</a>
-                </td>
-            </tr>
-            <tr>
-                <td>GitHub</td>
-                <td>实际参与『玉衡天枢』开发、测试、使用的用户可在此协作</td>
-                <td>无公有链接</td>
-            </tr>
-        </table>
-    </chapter>
+欢迎来到『玉衡天枢』，这是一个致力于探索实用应用的开源组织。
 
-</topic>
+## 探索项目
+
+### 1. 基础框架
+
+基础框架是一个包含网络、第三方集成、日志等组件的基础工具包。
+
+### 2. 玉衡系统
+
+玉衡系统是一个包含服务注册与发现、鉴权系统、网关系统、日志采集系统等组件的微服务架构。
+
+### 3. 虚空系统
+
+虚空系统是一个包含人工智能核心、连接器、应用适配器的人工智应用。
+
+### 4. 刻俄柏智能
+
+刻俄柏智能是一个包含响应式机器人核心、连接器、应用适配器的聊天机器人应用。
+
+### 5. GISS项目
+
+GISS项目是由 [@sunist-c](https://github.com/sunist-c) 转让的『原神』七圣召唤模拟器，是一个同人游戏项目。
+
+## 用户社区
+
+|   类型   |             描述             |                                       链接                                       |
+|:------:|:--------------------------:|:------------------------------------------------------------------------------:|
+|  QQ群   |   任意感兴趣的用户、开发者可在此发表观点与建议   |                               加入『玉衡天枢』QQ群聊（施工中）                                |
+|  QQ频道  |   任意感兴趣的用户、开发者可在此发表观点与建议   |                               加入『玉衡天枢』QQ频道（施工中）                                |
+|   飞书   | 实际参与『玉衡天枢』开发、测试、使用的用户可在此协作 | [加入『玉衡天枢』飞书组织](https://alioth-center.feishu.cn/invite/member/AxhflO7WP6wjUScG) |
+| GitHub | 实际参与『玉衡天枢』开发、测试、使用的用户可在此协作 |                                     无公开链接                                      |
+
+## 开源协议
+
+『玉衡天枢』的所有开源项目均采用 **[MIT License](license.md)** 开源
