@@ -1,4 +1,4 @@
-# weather-forecast
+# 天气预报
 
 对于很多功能，比如 [random-restaurant](random-restaurant.md)，需要根据当前用户的地理位置信息，天气信息等来进行更好的推荐。这个插件便是使用了 [彩云天气](https://www.caiyunapp.com) 所提供的天气接口来获取天气信息。
 
@@ -193,6 +193,26 @@ GetWeather(ctx context.Context, location Location) (Weather, error)
 #### 响应说明
 
 结构体较大，不适合在文档中展示，可以到 [彩云天气 - 实时天气数据](https://docs.caiyunapp.com/weather-api/v2/v2.6/1-realtime.html) 或者 [caiyun/weather.go](https://github.com/sunist-c/infrastructure/blob/b4fa2ec66f01d29a97c02d1f9cd0e337872d6a52/thirdparty/caiyun/model.go#L5) 查看具体的结构体定义。
+
+### 获取群聊/私聊地理位置
+
+```Go
+GetUserLoc(ctx context.Context, id int64, type string) (Location, error)
+```
+
+获取群聊/私聊设置的地理位置信息，如果群聊/私聊没有设置地理位置信息，会返回一个空的 `Location` 结构体并报错。
+
+#### 参数说明
+
+| 参数名称 |       参数类型        |   参数说明   |          示例值           |
+|:----:|:-----------------:|:--------:|:----------------------:|
+| ctx  | `context.Context` |  上下文对象   | `context.Background()` |
+|  id  |      `int64`      | 群聊/私聊 ID |      `1234567890`      |
+| type |     `string`      | 群聊/私聊类型  | `"group"`/`"private"`  |
+
+#### 响应说明
+
+同上文 `Location` 结构体。
 
 ## 进阶能力
 

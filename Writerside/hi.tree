@@ -57,6 +57,11 @@
     </toc-element>
     <toc-element topic="akasha-system.md" toc-title="虚空系统"/>
     <toc-element topic="ceobebot-summary.md" toc-title="刻俄柏智能">
+        <toc-element toc-title="路线图">
+            <toc-element topic="memory-of-chaos.md"/>
+            <toc-element topic="pure-fiction.md"/>
+            <toc-element topic="apocalyptic-shadow.md"/>
+        </toc-element>
         <toc-element toc-title="插件功能">
             <toc-element topic="gpt-reply.md"/>
             <toc-element topic="random-restaurant.md"/>
