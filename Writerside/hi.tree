@@ -5,11 +5,61 @@
 <instance-profile id="hi" name="Documents of Alioth Center"
                  start-page="home.md">
 
-    <toc-element topic="home.md" toc-title="首页"/>
-    <toc-element topic="infrastructure.md" toc-title="基础框架"/>
-    <toc-element topic="alioth-center.md" toc-title="玉衡系统"/>
+    <toc-element topic="home.md" toc-title="首页">
+        <toc-element hidden="true" topic="contributors.md" toc-title="贡献者清单"/>
+        <toc-element hidden="true" topic="license.md" toc-title="开源协议"/>
+    </toc-element>
+    <toc-element topic="infrastructure.md" toc-title="基础框架">
+        <toc-element toc-title="缓存">
+            <toc-element toc-title="内存缓存"/>
+            <toc-element toc-title="redis缓存"/>
+        </toc-element>
+        <toc-element toc-title="配置"/>
+        <toc-element toc-title="数据库">
+            <toc-element toc-title="基础实现"/>
+            <toc-element toc-title="具体实现"/>
+        </toc-element>
+        <toc-element toc-title="退出事件"/>
+        <toc-element toc-title="日志">
+            <toc-element toc-title="本地日志采集"/>
+            <toc-element toc-title="分布式日志采集"/>
+        </toc-element>
+        <toc-element toc-title="网络">
+            <toc-element toc-title="http"/>
+            <toc-element toc-title="rpc"/>
+        </toc-element>
+        <toc-element toc-title="第三方封装">
+            <toc-element toc-title="飞书"/>
+            <toc-element toc-title="OpenAI"/>
+            <toc-element toc-title="SMTP"/>
+            <toc-element toc-title="腾讯云"/>
+        </toc-element>
+        <toc-element toc-title="全链路追踪"/>
+        <toc-element toc-title="工具包">
+            <toc-element toc-title="并发工具"/>
+            <toc-element toc-title="编码工具"/>
+            <toc-element toc-title="生成工具"/>
+            <toc-element toc-title="时区工具"/>
+            <toc-element toc-title="变量工具"/>
+        </toc-element>
+        <toc-element toc-title="控制台">
+            <toc-element toc-title="提示词构建"/>
+            <toc-element toc-title="输入解析"/>
+        </toc-element>
+    </toc-element>
+    <toc-element topic="alioth-center.md" toc-title="玉衡系统">
+        <toc-element toc-title="分布式日志采集"/>
+        <toc-element toc-title="协议转发网关"/>
+        <toc-element toc-title="微服务注册与发现中心"/>
+        <toc-element toc-title="统一鉴权认证"/>
+        <toc-element toc-title="数据访问层"/>
+        <toc-element toc-title="应用配置发放"/>
+    </toc-element>
     <toc-element topic="akasha-system.md" toc-title="虚空系统"/>
     <toc-element topic="ceobebot.md" toc-title="刻俄柏智能"/>
-    <toc-element topic="gis-system.md" toc-title="GISS项目"/>
-    <toc-element hidden="true" topic="license.md" toc-title="开源协议"/>
+    <toc-element topic="gis-system.md" toc-title="[搁置]GISS项目">
+        <toc-element toc-title="GIS实现核心"/>
+        <toc-element toc-title="GIS后端"/>
+        <toc-element toc-title="GIS内容编辑器"/>
+    </toc-element>
 </instance-profile>
