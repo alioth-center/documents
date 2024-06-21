@@ -43,7 +43,7 @@ services:
 我们对这一配置做一些说明：
 
 1. 我们使用 `napcat` 作为消息收发的中间件，可以转到 [NapCat](https://github.com/NapNeko/NapCatQQ) 查看更多信息
-2. 
+2.
 
 > `docker.proxy.alioth.center` 是 `registry-1.docker.io` 的代理，你可以直接使用 `mlikiowa/napcat-docker:latest` 这一镜像
 >

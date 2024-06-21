@@ -9,11 +9,10 @@
     <footer>
         <social type="email" href="mailto:public@alioth.center">public@alioth.center</social>
         <social type="bilibili" href="">AliothCenter</social>
-        <copyright>Alioth Center, 2020-2023</copyright>
+        <copyright>Alioth Center, 2020-2024</copyright>
         <link href="https://github.com/alioth-center/infrastructure">Infrastructure</link>
-        <link href="https://github.com/alioth-center/alioth-center-core">AliothCenter</link>
-        <link href="https://github.com/alioth-center/akasha-system-core">AkashaSystem</link>
+        <link href="https://github.com/alioth-center/akasha-agent">AkashaSystem</link>
+        <link href="htt[s://github.com/alioth-center/akasha-whisper">AkashaWhisper</link>
         <link href="https://github.com/alioth-center/ceobebot-core">Ceobebot</link>
-        <link href="https://github.com/alioth-center/gis-core">GISS</link>
     </footer>
 </buildprofiles>
