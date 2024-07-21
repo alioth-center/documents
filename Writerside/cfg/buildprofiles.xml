@@ -4,6 +4,9 @@
         <header-logo>alioth.png</header-logo>
         <primary-color>purple</primary-color>
         <custom-favicons>alioth-favicon_500x500.png</custom-favicons>
+        <resizable-sidebar>true</resizable-sidebar>
+        <content-max-width>1920</content-max-width>
+        <custom-css>custom.css</custom-css>
     </variables>
     <build-profile instance="instance_id"/>
     <footer>

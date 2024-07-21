@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "CaskaydiaCove Nerd Font";
+    src: url("CaskaydiaCoveNerdFont-Regular.ttf") format("truetype");
+}
+
+code {
+    font-family: "CaskaydiaCove Nerd Font", serif !important;
+}
+

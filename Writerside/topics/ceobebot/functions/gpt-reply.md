@@ -8,6 +8,8 @@
 
 ## 插件配置
 
+- 此插件不依赖任何其余插件
+
 ```yaml
 openai_agent_configs:
   # OpenAI 的机密信息配置
