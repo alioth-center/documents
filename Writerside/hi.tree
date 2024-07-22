@@ -56,7 +56,7 @@
         <toc-element toc-title="应用配置发放"/>
     </toc-element>
     <toc-element topic="akasha-system.md" toc-title="虚空系统">
-        <toc-element toc-title="虚空咏者">
+        <toc-element topic="akasha-whisper.md">
             <toc-element topic="akasha-whisper-summary.md"/>
             <toc-element topic="akasha-whisper-configuration.md"/>
             <toc-element topic="akasha-whisper-database.md"/>

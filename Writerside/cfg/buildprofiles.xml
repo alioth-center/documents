@@ -1,9 +1,9 @@
 <buildprofiles xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/build-profiles.xsd"
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <variables>
-        <header-logo>alioth.png</header-logo>
+        <header-logo>bg_transparent_logo_square.svg</header-logo>
+        <custom-favicons>bg_transparent_logo_square.svg</custom-favicons>
         <primary-color>purple</primary-color>
-        <custom-favicons>alioth-favicon_500x500.png</custom-favicons>
         <resizable-sidebar>true</resizable-sidebar>
         <content-max-width>1920</content-max-width>
         <custom-css>custom.css</custom-css>
@@ -11,7 +11,7 @@
     <build-profile instance="instance_id"/>
     <footer>
         <social type="email" href="mailto:public@alioth.center">public@alioth.center</social>
-        <social type="bilibili" href="">AliothCenter</social>
+        <social type="rss" href="">RSS</social>
         <copyright>Alioth Center, 2020-2024</copyright>
         <link href="https://github.com/alioth-center/infrastructure">Infrastructure</link>
         <link href="https://github.com/alioth-center/akasha-agent">AkashaSystem</link>
