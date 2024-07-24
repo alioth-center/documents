@@ -2,7 +2,7 @@
 <!DOCTYPE instance-profile
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
 
-<instance-profile id="hi" name="Documents of Alioth Center"
+<instance-profile id="hi" name="玉衡天枢 - 文档"
                  start-page="home.md">
 
     <toc-element topic="home.md" toc-title="首页">
@@ -48,12 +48,14 @@
         </toc-element>
     </toc-element>
     <toc-element topic="alioth-center.md" toc-title="玉衡系统">
-        <toc-element toc-title="分布式日志采集"/>
-        <toc-element toc-title="协议转发网关"/>
-        <toc-element toc-title="微服务注册与发现中心"/>
-        <toc-element toc-title="统一鉴权认证"/>
-        <toc-element toc-title="数据访问层"/>
-        <toc-element toc-title="应用配置发放"/>
+        <toc-element topic="foreseen-summary.md" toc-title="远焦告警系统">
+            <!--数据库信息 START-->
+            <toc-element hidden="true" topic="foreseen-database-users.md"/>
+            <toc-element hidden="true" topic="foreseen-database-integrations.md"/>
+            <toc-element hidden="true" topic="foreseen-database-clients.md"/>
+            <toc-element hidden="true" topic="foreseen-database-accounts.md"/>
+            <!--数据库信息 END-->
+        </toc-element>
     </toc-element>
     <toc-element topic="akasha-system.md" toc-title="虚空系统">
         <toc-element topic="akasha-whisper.md">
