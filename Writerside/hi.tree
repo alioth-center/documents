@@ -54,6 +54,8 @@
             <toc-element hidden="true" topic="foreseen-database-integrations.md"/>
             <toc-element hidden="true" topic="foreseen-database-clients.md"/>
             <toc-element hidden="true" topic="foreseen-database-accounts.md"/>
+            <toc-element hidden="true" topic="foreseen-database-tasks.md"/>
+            <toc-element hidden="true" topic="foreseen-database-templates.md"/>
             <!--数据库信息 END-->
         </toc-element>
     </toc-element>
