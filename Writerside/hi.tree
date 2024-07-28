@@ -49,14 +49,17 @@
     </toc-element>
     <toc-element topic="alioth-center.md" toc-title="玉衡系统">
         <toc-element topic="foreseen-summary.md" toc-title="远焦告警系统">
-            <!--数据库信息 START-->
-            <toc-element hidden="true" topic="foreseen-database-users.md"/>
-            <toc-element hidden="true" topic="foreseen-database-integrations.md"/>
-            <toc-element hidden="true" topic="foreseen-database-clients.md"/>
-            <toc-element hidden="true" topic="foreseen-database-accounts.md"/>
-            <toc-element hidden="true" topic="foreseen-database-tasks.md"/>
-            <toc-element hidden="true" topic="foreseen-database-templates.md"/>
-            <!--数据库信息 END-->
+            <toc-element topic="foreseen-database.md">
+                <toc-element topic="foreseen-database-users.md"/>
+                <toc-element topic="foreseen-database-integrations.md"/>
+                <toc-element topic="foreseen-database-clients.md"/>
+                <toc-element topic="foreseen-database-accounts.md"/>
+                <toc-element topic="foreseen-database-tasks.md"/>
+                <toc-element topic="foreseen-database-templates.md"/>
+            </toc-element>
+            <toc-element topic="foreseen-api.md">
+                <toc-element topic="foreseen-api-users.md"/>
+            </toc-element>
         </toc-element>
     </toc-element>
     <toc-element topic="akasha-system.md" toc-title="虚空系统">

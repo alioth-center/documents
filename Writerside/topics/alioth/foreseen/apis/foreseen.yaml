@@ -1,0 +1,314 @@
+openapi: 3.0.0
+info:
+  title: 远焦 API 文档
+  description: 玉衡天枢远焦项目的 API 集合文档
+  version: 1.0.0
+
+paths:
+  /user:
+    post:
+      summary: 创建远焦接收用户
+      description: 该接口可以接收一个新的用户信息与其对应的第三方账号集成信息，在对应的数据库中创建记录，如用户已存在/集成不存在等异常情况，将会返回错误。在请求该接口时，需在请求头携带 Authorization 以进行鉴权。用户指的是远焦告警系统中，一个接收通知的逻辑实体(形参)，账号指的是这个逻辑实体所对应的具体通知接收方实现(实参)
+      operationId: createUserAndAccount
+      tags:
+        - users
+        - accounts
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          description: 远焦系统操作密钥
+          schema:
+            type: string
+      requestBody:
+        description: 创建远焦接收用户请求
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateUserRequest'
+      responses:
+        '200':
+          description: 创建成功
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateUserResponse'
+        '401':
+          description: 权限错误
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorMessage'
+        '404':
+          description: 资源错误
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorMessage'
+        '409':
+          description: 冲突错误
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorMessage'
+  /user/${username}:
+    get:
+      summary: 获取远焦用户信息
+      description: 该接口可以根据传递的用户名查询远焦系统中的用户信息和账号信息表，返回其对应的用户信息和账号信息。如果不存在对应的用户信息，将会返回错误。请求该接口时，需在请求头中携带 Authorization 以进行鉴权。
+      operationId: getUserAndAccounts
+      tags:
+        - users
+        - accounts
+      parameters:
+        - name: username
+          in: path
+          required: true
+          description: 用户名
+          schema:
+            type: string
+        - name: Authorization
+          in: header
+          required: true
+          description: 远焦系统操作密钥
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 获取远焦用户成功
+        '401':
+          description: 无权获取远焦用户
+        '404':
+          description: 远焦用户不存在
+    put:
+      summary: 更新远焦用户信息
+      description: 该接口可以根据传递的用户名和更新操作列表，对远焦系统中的用户信息和账户信息进行更新，并返回更新后的对应全量信息。如果不存在对应的用户信息，或者更新时出现冲突，将会返回错误。请求该接口时，需在请求头中携带 Authorization 以进行鉴权。
+      parameters:
+        - name: username
+          in: path
+          required: true
+          description: 用户名
+          schema:
+            type: string
+        - name: Authorization
+          in: header
+          required: true
+          description: 远焦系统操作密钥
+          schema:
+            type: string
+      requestBody:
+        description: 更新用户账户信息请求
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateUserAccountRequest'
+      responses:
+        '200':
+          description: 更新成功
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UpdateUserAccountResponse'
+        '401':
+          description: 权限错误
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UpdateUserAccountResponse'
+        '404':
+          description: 资源错误
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UpdateUserAccountResponse'
+        '409':
+          description: 冲突错误
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UpdateUserAccountResponse'
+components:
+  schemas:
+    CreateUserRequest:
+      description: 创建远焦接收用户请求
+      type: object
+      required:
+        - username
+        - usertype
+      properties:
+        username:
+          type: string
+          description: 用户名
+        usertype:
+          type: string
+          enum:
+            - user
+            - group
+            - integration
+          description: 用户类型
+        accounts:
+          type: array
+          items:
+            type: object
+            required:
+              - integration
+              - account_id
+            properties:
+              integration:
+                type: string
+                description: 集成名称
+              account_id:
+                type: string
+                description: 对应集成的账户ID
+    CreateUserResponse:
+      description: 创建远焦接收用户响应
+      type: object
+      properties:
+        error_code:
+          type: integer
+          description: 错误码，0表示成功
+        error_message:
+          type: string
+          description: 错误消息，成功时为 success
+        data:
+          type: object
+          description: 用户信息
+          properties:
+            user_id:
+              type: integer
+              description: 用户ID
+            username:
+              type: string
+              description: 用户名
+            usertype:
+              type: string
+              description: 用户类型
+            accounts:
+              type: array
+              items:
+                type: object
+                properties:
+                  account_id:
+                    type: integer
+                    description: 集成账号ID
+                  integration:
+                    type: string
+                    description: 集成名称
+                  account:
+                    type: string
+                    description: 集成账号
+    GetUserResponse:
+      description: 创建远焦接收用户响应
+      type: object
+      properties:
+        error_code:
+          type: integer
+          description: 错误码，0表示成功
+        error_message:
+          type: string
+          description: 错误消息，成功时为 success
+        data:
+          type: object
+          description: 用户信息
+          properties:
+            user_id:
+              type: integer
+              description: 用户ID
+            username:
+              type: string
+              description: 用户名
+            usertype:
+              type: string
+              description: 用户类型
+              enum:
+                - user
+                - group
+                - integration
+            accounts:
+              type: array
+              items:
+                type: object
+                properties:
+                  account_id:
+                    type: integer
+                    description: 集成账号ID
+                  integration:
+                    type: string
+                    description: 集成名称
+                  account:
+                    type: string
+                    description: 集成账号
+    UpdateUserAccountRequest:
+      type: object
+      properties:
+        accounts:
+          type: array
+          items:
+            type: object
+            required:
+              - action
+              - integration
+            properties:
+              action:
+                type: string
+                description: 对集成账号的操作
+                enum:
+                  - create
+                  - update
+                  - delete
+              integration:
+                type: string
+                description: 集成账号的类型名称
+              account_id:
+                type: string
+                description: 集成账号的ID
+    UpdateUserAccountResponse:
+      type: object
+      properties:
+        error_code:
+          type: integer
+          description: 错误码，0表示成功
+        error_message:
+          type: string
+          description: 错误信息，success表示成功
+        data:
+          type: object
+          description: 更新操作的返回结果
+          properties:
+            user_id:
+              type: integer
+              description: 用户ID
+            username:
+              type: string
+              description: 用户名称
+            usertype:
+              type: string
+              description: 用户类型
+              enum:
+                - user
+                - group
+                - integration
+            accounts:
+              type: array
+              items:
+                type: object
+                properties:
+                  account_id:
+                    type: integer
+                    description: 集成账号ID
+                  integration:
+                    type: string
+                    description: 集成名称
+                  account:
+                    type: string
+                    description: 集成账号
+    ErrorMessage:
+      type: object
+      properties:
+        error_code:
+          type: integer
+          description: 错误码
+        error_message:
+          type: string
+          description: 错误消息
