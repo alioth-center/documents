@@ -49,7 +49,7 @@
                     "accounts": [
                         {
                             "integration": "lark",
-                            "account_id": "ou_1145141919810"
+                            "account": "ou_1145141919810"
                         }
                     ]
                 }
@@ -111,12 +111,12 @@
                     {
                         "action": "create",
                         "integration": "lark",
-                        "account_id": "ou_1145141919810"
+                        "account": "ou_1145141919810"
                     },
                     {
                         "action": "create",
                         "integration": "knock"
-                        "account_id": "GTR_1145141919810"
+                        "account": "GTR_1145141919810"
                     }
                 ]
             </sample>
@@ -129,12 +129,12 @@
                     {
                         "action": "update",
                         "integration": "dingtalk",
-                        "account_id": "1145141919810"
+                        "account": "1145141919810"
                     },
                     {
                         "action": "create",
                         "integration": "youtrack",
-                        "account_id": "1145141919810"
+                        "account": "1145141919810"
                     }
                 ]
             </sample>
@@ -148,8 +148,9 @@
                     "usertype": "user",
                     "accounts": [
                         {
+                            "account_id": 1145141919810,
                             "integration": "lark",
-                            "account_id": "ou_1145141919810"
+                            "account": "ou_1145141919810"
                         }
                     ]
                 }

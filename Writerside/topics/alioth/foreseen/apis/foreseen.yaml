@@ -76,10 +76,22 @@ paths:
       responses:
         '200':
           description: 获取远焦用户成功
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetUserResponse'
         '401':
           description: 无权获取远焦用户
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetUserResponse'
         '404':
           description: 远焦用户不存在
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetUserResponse'
     put:
       summary: 更新远焦用户信息
       description: 该接口可以根据传递的用户名和更新操作列表，对远焦系统中的用户信息和账户信息进行更新，并返回更新后的对应全量信息。如果不存在对应的用户信息，或者更新时出现冲突，将会返回错误。请求该接口时，需在请求头中携带 Authorization 以进行鉴权。
@@ -369,12 +381,12 @@ components:
             type: object
             required:
               - integration
-              - account_id
+              - account
             properties:
               integration:
                 type: string
                 description: 集成名称
-              account_id:
+              account:
                 type: string
                 description: 对应集成的账户ID
     CreateUserResponse:
@@ -476,9 +488,9 @@ components:
               integration:
                 type: string
                 description: 集成账号的类型名称
-              account_id:
+              account:
                 type: string
-                description: 集成账号的ID
+                description: 集成账号
     UpdateUserAccountResponse:
       type: object
       properties:

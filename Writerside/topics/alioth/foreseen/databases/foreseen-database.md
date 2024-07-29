@@ -70,19 +70,11 @@ erDiagram
         int64 UpdatedAt
     }
 
-    ACCOUNT ||--o{ USER : "UserID"
-    ACCOUNT ||--o{ INTEGRATION : "Integration"
-    TASK ||--o{ INTEGRATION : "IntegrationID"
-    TASK ||--o{ USER : "UserID"
-    TASK ||--o{ CLIENT : "ClientID"
-    TASK ||--o{ ACCOUNT : "AccountID"
-    TASK ||--o{ TEMPLATE : "TemplateID"
-
+    TASK }o--|| TEMPLATE : "TemplateID"
     USER ||--o{ ACCOUNT : "UserID"
     INTEGRATION ||--o{ ACCOUNT : "Integration"
     INTEGRATION ||--o{ TASK : "IntegrationID"
     USER ||--o{ TASK : "UserID"
     CLIENT ||--o{ TASK : "ClientID"
     ACCOUNT ||--o{ TASK : "AccountID"
-    TEMPLATE ||--o{ TASK : "TemplateID"
 ```
