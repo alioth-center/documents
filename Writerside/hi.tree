@@ -59,6 +59,7 @@
             </toc-element>
             <toc-element topic="foreseen-api.md">
                 <toc-element topic="foreseen-api-users.md"/>
+                <toc-element topic="foreseen-api-templates.md"/>
             </toc-element>
         </toc-element>
     </toc-element>

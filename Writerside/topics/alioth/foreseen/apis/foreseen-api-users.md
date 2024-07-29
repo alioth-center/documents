@@ -7,7 +7,7 @@
 
 ## 详细接口文档
 
-<api-doc openapi-path="./foreseen.yaml">
+<api-doc openapi-path="./foreseen.yaml" tag="users">
     <api-endpoint endpoint="/user/${username}" method="GET">
         <response type="200"><sample lang="JSON" title="success">
             {
