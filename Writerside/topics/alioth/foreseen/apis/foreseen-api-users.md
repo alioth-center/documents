@@ -32,7 +32,7 @@
                 "error_code": 4011,
                 "error_message": "invalid authorization token"
             }
-        </sample> </response>
+        </sample></response>
         <response type="404"><sample lang="JSON" title="user not found">
             {
                 "error_code": 4041,
@@ -79,25 +79,25 @@
                     }           
                 }
         </sample></response>
-            <response type="401"><sample lang="JSON" title="authorization error">
-                    {
-                        "error_code": 4011,
-                        "error_message": "invalid authorization token"
-                    }
-            </sample></response>
-            <response type="404"><sample lang="JSON" title="integration not found">
-                    {
-                        "error_code": 4041,
-                        "error_message": "integration not found"
-                    }
-            </sample></response>
-            <response type="409"><sample lang="JSON" title="user exist">
-                    {
-                        "error_code": 4092,
-                        "error_message": "user already exist"
-                    }
-            </sample></response>
-            <response type="409"><sample lang="JSON" title="account exist">
+        <response type="401"><sample lang="JSON" title="authorization error">
+                {
+                    "error_code": 4011,
+                    "error_message": "invalid authorization token"
+                }
+        </sample></response>
+        <response type="404"><sample lang="JSON" title="integration not found">
+                {
+                    "error_code": 4041,
+                    "error_message": "integration not found"
+                }
+        </sample></response>
+        <response type="409"><sample lang="JSON" title="user exist">
+                {
+                    "error_code": 4092,
+                    "error_message": "user already exist"
+                }
+        </sample></response>
+        <response type="409"><sample lang="JSON" title="account exist">
                     {
                         "error_code": 4093,
                         "error_message": "account already exist"
@@ -141,14 +141,18 @@
         </request>
         <response type="200"><sample lang="JSON" title="success">
             {
-                "username": "example_user",
-                "usertype": "user",
-                "accounts": [
-                    {
-                        "integration": "lark",
-                        "account_id": "ou_1145141919810"
-                    }
-                ]
+                "error_code": 0,
+                "error_message": "success",
+                "data": {
+                    "username": "example_user",
+                    "usertype": "user",
+                    "accounts": [
+                        {
+                            "integration": "lark",
+                            "account_id": "ou_1145141919810"
+                        }
+                    ]
+                }
             }
         </sample></response>
         <response type="401"><sample lang="JSON" title="authorization error">
