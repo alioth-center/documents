@@ -353,9 +353,87 @@ paths:
               schema:
                 $ref: '#/components/schemas/PreviewTemplateResponse'
   /integration:
+    post:
+      summary: 创建集成
+      operationId: createIntegration
+      tags:
+        - integrations
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          description: Bearer Token
+          schema:
+            type: string
+      requestBody:
+        description: 创建集成请求
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateIntegrationRequest'
+      responses:
+        '200':
+          description: 创建成功
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateIntegrationResponse'
+        '401':
+          description: 权限错误
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateIntegrationResponse'
+        '409':
+          description: 冲突错误
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateIntegrationResponse'
   /integration/${integration_name}:
+    get:
+      summary: 获取集成信息
+      operationId: getIntegration
+      tags:
+        - integrations
+      parameters:
+        - name: integration_name
+          in: path
+          required: true
+          description: 集成名称
+          schema:
+            type: string
+        - name: Authorization
+          in: header
+          required: true
+          description: Bearer Token
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 获取成功
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetIntegrationResponse'
+        '401':
+          description: 权限错误
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetIntegrationResponse'
+        '404':
+          description: 资源错误
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetIntegrationResponse'
   /integration/${integration_name}/usage:
   /notification/${integration_name}:
+  /client:
+  /client/${client_name}:
+  /authorization:
 components:
   schemas:
     CreateUserRequest:
@@ -533,6 +611,11 @@ components:
                     description: 集成账号
     CreateTemplateRequest:
       type: object
+      description: 创建模板请求
+      required:
+        - name
+        - content
+        - arguments
       properties:
         name:
           type: string
@@ -547,6 +630,7 @@ components:
           description: 模板变量示例
     CreateTemplateResponse:
       type: object
+      description: 创建模板响应
       properties:
         error_code:
           type: integer
@@ -664,3 +748,57 @@ components:
             preview:
               type: string
               description: 模板预览
+    CreateIntegrationRequest:
+      type: object
+      description: 创建集成请求
+      required:
+        - name
+        - secrets
+      properties:
+        name:
+          type: string
+          description: 集成名称
+        secrets:
+          type: array
+          description: 集成密钥
+          items:
+            type: string
+            description: 集成密钥项
+    CreateIntegrationResponse:
+      type: object
+      description: 创建集成响应
+      properties:
+        error_code:
+          type: integer
+          description: 错误码，0表示成功
+        error_message:
+          type: string
+          description: 错误消息，成功时为 success
+        data:
+          type: object
+          properties:
+            integration_id:
+              type: integer
+              description: 集成的ID
+            integration_name:
+              type: string
+              description: 集成的名称
+    GetIntegrationResponse:
+      type: object
+      description: 获取集成响应
+      properties:
+        error_code:
+          type: integer
+          description: 错误码，0表示成功
+        error_message:
+          type: string
+          description: 错误消息，成功时为 success
+        data:
+          type: object
+          properties:
+            integration_id:
+              type: integer
+              description: 集成的ID
+            integration_name:
+              type: string
+              description: 集成的名称
