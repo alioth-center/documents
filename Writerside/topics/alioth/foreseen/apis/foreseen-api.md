@@ -2,15 +2,17 @@
 
 ## 接口信息
 
-|   接口名    | 接口协议 |            接口说明             |             对应文档              |
-|:--------:|:----:|:---------------------------:|:-----------------------------:|
-| 获取远焦用户信息 | HTTP |     用于获取远焦系统的用户信息和账户信息      |   [](foreseen-api-users.md)   |
-| 创建远焦接收用户 | HTTP |  根据给定的用户信息和账户信息创建远焦接收用户和账户  |   [](foreseen-api-users.md)   |
-| 更新远焦用户信息 | HTTP | 根据给定的用户名称和更新操作列表更新远焦接收用户和账户 |   [](foreseen-api-users.md)   |
-| 获取远焦信息模板 | HTTP |       用于获取远焦系统的信息模板信息       | [](foreseen-api-templates.md) |
-| 创建远焦信息模板 | HTTP |      根据给定的模板信息创建远焦信息模板      | [](foreseen-api-templates.md) |
-| 更新远焦信息模板 | HTTP |  根据给定的模板名称和更新操作列表更新远焦信息模板   | [](foreseen-api-templates.md) |
-| 预览远焦信息内容 | HTTP |    根据给定的模板名称和参数预览远焦信息内容     | [](foreseen-api-templates.md) |
+|   接口名    | 接口协议 |            接口说明             |               对应文档               |
+|:--------:|:----:|:---------------------------:|:--------------------------------:|
+| 获取远焦用户信息 | HTTP |     用于获取远焦系统的用户信息和账户信息      |    [](foreseen-api-users.md)     |
+| 创建远焦接收用户 | HTTP |  根据给定的用户信息和账户信息创建远焦接收用户和账户  |    [](foreseen-api-users.md)     |
+| 更新远焦用户信息 | HTTP | 根据给定的用户名称和更新操作列表更新远焦接收用户和账户 |    [](foreseen-api-users.md)     |
+| 获取远焦信息模板 | HTTP |       用于获取远焦系统的信息模板信息       |  [](foreseen-api-templates.md)   |
+| 创建远焦信息模板 | HTTP |      根据给定的模板信息创建远焦信息模板      |  [](foreseen-api-templates.md)   |
+| 更新远焦信息模板 | HTTP |  根据给定的模板名称和更新操作列表更新远焦信息模板   |  [](foreseen-api-templates.md)   |
+| 预览远焦信息内容 | HTTP |    根据给定的模板名称和参数预览远焦信息内容     |  [](foreseen-api-templates.md)   |
+| 获取远焦集成信息 | HTTP |       用于获取远焦系统的集成信息列表       | [](foreseen-api-integrations.md) |
+| 创建远焦集成信息 | HTTP |      根据给定的集成信息创建远焦集成信息      | [](foreseen-api-integrations.md) |
 
 ## SDK封装
 
